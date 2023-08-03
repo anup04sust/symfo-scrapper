@@ -1,0 +1,16 @@
+/*
+    Created on : Aug 3, 2023, 3:26:40 PM
+    Author     : anup
+*/
+$border-radius: 4px;
+$border-radius-lg: 4px;
+@import "bootstrap";
+body {
+    background-color: lightgray;
+}
+.auth-flex-box{
+   height: 100vh;
+   .auth-logo{
+       max-width: 80px;
+   }
+}

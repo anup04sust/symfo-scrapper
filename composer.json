@@ -3,6 +3,14 @@
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
+     "authors": [
+        {
+            "name": "Anup Biswas",
+            "email": "anup04sust@gmail.com",
+            "homepage": "https://www.linkedin.com/in/anup04sust/",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=8.1",
         "ext-ctype": "*",
@@ -37,6 +45,7 @@
         "symfony/twig-bundle": "6.3.*",
         "symfony/validator": "6.3.*",
         "symfony/web-link": "6.3.*",
+        "symfony/webpack-encore-bundle": "^2.0",
         "symfony/yaml": "6.3.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"

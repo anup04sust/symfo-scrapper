@@ -2,15 +2,68 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>{% block title %}SYMFOSCRAPPER{% endblock %}</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/scrapper-app.css">
+
         {% block stylesheets %}
+
         {% endblock %}
 
         {% block javascripts %}
+
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="wrapper">  
+            <header class="dash-header">
+                <nav class="navbar navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="/images/logo.png" class="figure-img rounded" width="50" alt="SymfoScrapper">
+                            <strong>SymfoScrapper</strong>
+                        </a>
+                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUserCtc" aria-controls="navbarUserCtc" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+                    </div>
+                </nav>
+                <div class="collapse" id="navbarUserCtc">
+                    <div class="bg-dark p-4">
+                       {% if app.user %}
+                        <div class="mb-3 text-white text-end">
+                            You are logged in as {{ app.user.userIdentifier }} | <a class="btn btn-sm btn-primary" href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+                        
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+
+                <div class="auth-flex-box d-flex flex-column justify-content-center align-items-center">
+                    <figure class="figure">
+                        <img src="/images/logo.png" class="figure-img img-fluid rounded auth-logo" alt="SymfoScrapper">
+
+                    </figure>
+
+                    {% block body %}{% endblock %}
+
+                </div>
+            </div>
+
+        </div> 
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
