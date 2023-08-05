@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Scrape Company Profile{% endblock %}
+
+{% block body %}
+    <div class="form-wrap-scrape">
+    <h3 class="text-center mb-4">Scrape new company information</h3>
+
+    {{ form_start(form) }}
+    
+    {{ form_widget(form) }}
+       
+  {{ form_end(form) }}
+   
+    </div>
+  <div class="data-wrap-scrape">
+<pre>
+    {{ dump(data) }}
+</pre>
+  </div>
+{% endblock %}

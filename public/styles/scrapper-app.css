@@ -13021,4 +13021,33 @@ body {
   max-width: 80px;
 }
 
+.form-wrap-scrape #form {
+  border: 1px solid #004085;
+  position: relative;
+  padding: 0;
+  margin-bottom: 10px;
+  padding-right: 100px;
+}
+.form-wrap-scrape #form > div > label {
+  display: none;
+}
+.form-wrap-scrape #form > div > input {
+  width: 100%;
+  line-height: 20px;
+  padding: 8px;
+  border: 0;
+  box-shadow: none;
+}
+.form-wrap-scrape button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  text-align: center;
+  border: 0px;
+  border-left: 1px solid #004085;
+  line-height: 20px;
+  padding: 8px;
+}
+
 /*# sourceMappingURL=scrapper-app.css.map */
